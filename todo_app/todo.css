@@ -1,0 +1,10 @@
+body {
+    min-height: 100%;
+    height: 100%;
+    font-family: Bad Script;
+}
+
+.btnremove{
+	width: 40px;
+	height: 30px;
+}
