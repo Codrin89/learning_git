@@ -1,48 +1,28 @@
-const carteLista = [
-	{	
-		denumireCarte:'Sub aceeasi steaa',
-		autor:'Jhon Green',
-		anPublicatie:2019,
-	},
-	{	denumireCarte:'Insomniii',
-		autor:'Irina Binder',
-		anPublicatie:2018
-	},
-	{	
-		denumireCarte:'Amintiri diin viitor',
-		autor:'Andreea Russo',
-		anPublicatie:2015
-	},
-	{	
-		denumireCarte:'În umbra pașiilor tăi',
-		autor:'Vitali Cipileaga',
-		anPublicatie:2015
-	},
-	{	
-		denumireCarte:'Homeworik',
-		autor:'Nicolae Dabija',
-		anPublicatie:2012
-	},
-	{	
-		denumireCarte:'Ce ne spunejydrjnbim',
-		autor:'Chris Simion',
-		anPublicatie:2011
-	}
-];
-
-
-function renderList() {
-	// get localstorage
-
+function renderList() {  
 	const carteLista = JSON.parse(localStorage.getItem('book-info'));
 	if(carteLista) {
-		carteLista.map((element) => {
-			let container = '<div class="row"><div>'+element.denumireCarte+'</div><div>'+element.autor+'</div><div>'+element.anPublicatie+'</div></div>';
+		carteLista.map((element, index) => {
+			let container = '<div class="row"><div>'+element.denumireCarte+'</div><div>'+element.autor+'</div><div>'+element.anPublicatie+'</div><button id="btn-update" data-id="'+index+'">Update</btn><button id="btn-delete" data-id="'+index+'">Delete</button></div>';
 			document.getElementsByClassName('list')[0].innerHTML += container;
 		});
 	}
-	
-}
+function addlistener() {
+	document.getElementById('btn-update').addEventListener('click', (e) => {
+		const id =  $target.data('id');
+		const carteLista = JSON.parse(localStorage.getItem('book-info'));
+			carteLista[id].updateAn=document.getElementById('update-an').value;
+			carteLista[id].updateAutor = document.getElementById('update-autor').value;
+			carteLista[id].updateDenumire = document.getElementById('update-name').value;
+		localStorage.setItem('book-info', JSON.stringify(carteLista));
+					})
+	document.getElementById('btn-delete').addEventListener('click',() =>{
+		const id = event.currentTarget.getAttribute('data-id');
+		if(carteLista === null) {
+		carteLista = [];}
+	return carteLista.splice(id,1);
+			localStorage.setItem('book-info', JSON.stringify(carteLista));
+	})}}
+
 renderList();
 
 document.getElementById('add-book').addEventListener('click', () => {
@@ -56,49 +36,75 @@ document.getElementById('cancel-add').addEventListener('click', () => {
 
 
 document.getElementById('save-add').addEventListener('click', () => {
+	if(!validateform()) {
+		alert('something wrong with form!');
+		return false;
+	}
 	const carteLista = JSON.parse(localStorage.getItem('book-info'));
 	const objectAddd = {
 		"anPublicatie": document.getElementById('add-an').value,
 		"autor": document.getElementById('add-autor').value,
 		"denumireCarte": document.getElementById('add-name').value
 	};
-
-
-let carteListaNoua =[];
-	carteListaNoua.push(objectAddd);
-	localStorage.setItem('book-info', JSON.stringify(carteListaNoua));
+	if(carteLista === null) {
+		carteLista = [];
+	}
+	carteLista.push(objectAddd);
+	localStorage.setItem('book-info', JSON.stringify(carteLista));
 	window.location.reload();
 });
 
 
- // function validateForm() {
- //  if (anPublicatie.value== null || anPublicatie== "", add-autor.value == null || add-autor.value == "", anPublicatie.value == null || anPublicatie.value == "") {
- //      alert("Comppleteaza");
- //      return false;
- //    }
- //  }
 
-
-function removeAll(){
-let containerId = document.getElementById("container");
-
-containerId.innerHTML = "";
+function validateform(){  
+	const name = document.getElementById("add-name").value;  
+	const autor = document.getElementById("add-autor").value;  
+	const year = document.getElementById("add-an").value;  
+	if(name.length < 1 && name.split(' ').join('').length < 1) {
+		return false;
+	}
+	if(autor.length < 1 && autor.split(' ').join('').length < 1) {
+		return false;
+	}
+	if(year.length < 4) {
+		return false;
+	}
+	return true;
 }
 
 
-function validateform(){  
-let a = document.myForm.add-name.value;  
-let b = document.myForm.add-autor.value;  
-let c = document.myForm.add-an.value;  
-  
-if (a == null || a == ""){  
-  alert("obligatoriu");  
-  return false;  
-}else if (b == null || b == ""){  
-  alert("obligatoriu");  
-  return false;  
-  }  else (c == null || c == "") {
-  alert("obligatoriu");  
-  return false;  
-  }
-}  
+// document.getElementById('update-add').addEventListener('click',() =>{
+// 	const carteLista = JSON.parse(localStorage.getItem('book-info'));
+// 	const objectUpdate = {
+// 		"updateAn": document.getElementById('update-an').value,
+// 		"updateAutor": document.getElementById('update-autor').value,
+// 		"updateDenumire": document.getElementById('update-name').value
+// 	};
+// 	if(carteLista === null) {
+// 		carteLista = [];
+// 	}
+// 	carteLista.push(objectUpdate);
+// 	localStorage.setItem('book-info', JSON.stringify(carteLista));
+// 	window.location.reload();
+// });
+
+
+// let x = document.getElementById('btn-delete').addEventListener('click', deletebook) ;
+//  const carteLista = JSON.parse(localStorage.getItem('book-info'));
+// function deletebook(){
+// 	if(carteLista === null) {
+// 		carteLista = [];
+// 	}
+// 	carteLista.splice('data-id',1)
+// }
+
+
+// let clear = document.getElementById('clear');
+//     clear.addEventListener('click', () => {
+//     	if(carteLista === null) {
+// 		carteLista = [];
+// 	}
+// 	carteLista.push(objectAddd);
+//       carteLista.splice(id,1);
+//     })
+

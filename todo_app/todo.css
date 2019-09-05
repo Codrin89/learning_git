@@ -8,3 +8,26 @@ body {
 	width: 40px;
 	height: 30px;
 }
+
+// document.getElementById('update-add').addEventListener('click',() =>{
+// 	const carteLista = JSON.parse(localStorage.getItem('book-info'));
+// 	const objectUpdate = {
+// 		"updateAn": document.getElementById('update-an').value,
+// 		"updateAutor": document.getElementById('update-autor').value,
+// 		"updateDenumire": document.getElementById('update-name').value
+// 	};
+// 	if(carteLista === null) {
+// 		carteLista = [];
+// 	}
+// 	carteLista.push(objectUpdate);
+// 	localStorage.setItem('book-info', JSON.stringify(carteLista));
+// 	window.location.reload();
+// });
+
+// let x =document.getElementsByClassName('btn-delete')
+// function deleteb (){
+// 	x.addEventListener('click', deletebook) }
+
+// function deletebook(){
+// 	carteLista.splice(id,1)
+// }
