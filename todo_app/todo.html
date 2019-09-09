@@ -37,14 +37,19 @@
 			<div>Autor</div>
 			<div>Anul publicarii</div>
 		</div>
+		<div class="updateDiv">
+			<div> Update Nume carte</div>
+			<div> Update Autor</div>
+			<div> Update Anul publicarii</div>
+		</div>
 	</div>
 	<div class="action-button">
 		<button id="add-book">Add book</button>
 	</div>
-   <div class="add-pop-up displayNone" id="error">
-	    	<input id="add-name" type="text" placeholder="Nume carte" name="a"   />
-	    	<input id="add-autor" type="text" placeholder="Autor" name="b"  />
-	    	<input id="add-an" type="number" placeholder="An pulicatie"name="c"    />
+   <div class="add-pop-up displayNone" >
+	    	<input id="add-name" type="text" placeholder="Nume carte" name="a" />
+	    	<input id="add-autor" type="text" placeholder="Autor" name="b"/>
+	    	<input id="add-an" type="number" placeholder="An pulicatie"name="c"/>   	
 		    	<button id="save-add">Save</button>
 		    	<button id="cancel-add">Cancel</button>	
     </div>
@@ -52,3 +57,46 @@
 </body>
 </html>
 
+
+<!-- function renderList() {  
+	document.getElementsByClassName('list')[0].innerHTML="";
+	const carteLista = JSON.parse(localStorage.getItem('book-info'));
+	if(carteLista) {
+		carteLista.map((element, index) => {
+			let container = '<div class="row"><div>'+element.denumireCarte+'</div><div>'+element.autor+'</div><div>'+element.anPublicatie+'</div> <div class"updateDiv"><div>'+element.updateDenumire+'</div><div>'+element.updateAutor+'</div><div>'+element.updateAn+'</div><div class="buttonDeUp" ><button class="btn-update" data-id="'+index+'">Update</btn><button class="btn-delete" data-id="'+index+'">Delete</button></div></div></div>';
+			document.getElementsByClassName('list')[0].innerHTML += container;
+		});
+	}
+	addlistener();
+}
+
+function addlistener() {
+	const updateBtns = document.getElementsByClassName('btn-update');
+	for(let i = 0; i < updateBtns.length; i++) {
+		updateBtns[i].addEventListener('click', function(e){
+			console.log(this.dataset.id);
+			const id =  parseInt(this.dataset.id);
+			const carteLista = JSON.parse(localStorage.getItem('book-info'));
+			carteLista[id].updateAn=document.getElementById('update-an').value;
+			carteLista[id].updateAutor = document.getElementById('update-autor').value;
+			carteLista[id].updateDenumire = document.getElementById('update-name').value;
+	});
+	if(carteLista !== null) {
+		carteLista = [];
+	}
+	carteLista.push(objectAddd);
+		};
+	
+	const deleteBtns = document.getElementsByClassName('btn-delete');
+	for(let i = 0; i < deleteBtns.length; i++) {
+		deleteBtns[i].addEventListener('click',function(e){
+		const id =  parseInt(this.dataset.id);
+		const carteLista = JSON.parse(localStorage.getItem('book-info'));
+		if(carteLista !== null) {
+			carteLista.splice(id,1);
+		}
+		localStorage.setItem('book-info', JSON.stringify(carteLista));
+		renderList();
+	});
+
+}} -->
