@@ -13,3 +13,66 @@ body {
 .updatediv{
 	display: none;
 }
+
+
+.title h2{
+	text-align: center;
+}
+
+.buttonord {
+    padding: 4px 40px;
+    font-size: 20px;
+    margin-top: 9px;
+    margin-right: 30px;
+}
+
+#ordonareul {
+    display: block;
+    font-size: 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    /*padding: 5px 8px;*/
+    margin-top: 2px;
+    float: right;
+    border: 1px solid #B2DFDB;
+    position: absolute;
+    z-index: 1;
+    float: right;
+    width: 177px;
+}
+
+#ordonareul ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#ordonareul ul li{
+    padding: 5px;
+    border-bottom:1px solid #B2DFDB;
+    cursor: pointer;
+}
+#ordonareul ul li:hover{
+    background-color: #BDBDBD;
+    cursor: pointer;
+}
+.sortcontainer1 li {
+    cursor: pointer;
+}
+
+.search i{
+	cursor: pointer;
+}
+.search-name{
+	cursor: pointer;
+    right: 50%;
+    width: 50px;
+    height: 30px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid black;
+   
+}
