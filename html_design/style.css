@@ -77,6 +77,7 @@ body {
 	overflow: hidden;
 	padding: 0 10% 10px;
 	margin-top: -50px;
+	background: #FCFCFC;
 }
 .search-container .search-wrapper .tab-list {
 	position: relative;
@@ -535,10 +536,12 @@ body {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: minmax(230px, auto);
 }
+
 .apartaments-list .item {
 	box-shadow: 0px 3px 6px #00000017;
 	border-radius: 6px;
 }
+
 .apartaments-list .item .position-down {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -546,6 +549,7 @@ body {
     bottom: 0;
     padding: 5px 10px;
 }
+
 .apartaments-list .item .position-down label {
 	color: #fff;
 	font-family: 'Lato';
@@ -554,6 +558,7 @@ body {
 	line-height: 19px;
 	letter-spacing: 1px;
 }
+
 .apartaments-list .item .position-down .btn-apartaments {
 	position: absolute;
 	right: 0;
@@ -569,4 +574,761 @@ body {
 	border: none;
 	outline: none;
 	padding: 0 20px;
+}
+
+
+
+
+.calendar-apartament-container.container{
+	display: grid;
+	grid-template-columns:  1fr 1fr;
+	background: #FCFCFC;
+	grid-gap: 10%;
+}
+
+
+.calendar-apartament-container2.container{
+	display: grid;
+	grid-template-columns:  1fr 1fr;
+	background: #FCFCFC;
+}
+
+.calendar-div{
+	width: 351px;
+	height: 460px;
+	margin-top: 30px;-top: 30px;
+}
+
+
+.calendar-container {
+	background-color: white;
+	padding-bottom: 20px;
+}
+
+	.apartament-container {
+	width: 506px;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-top: 30px;
+	position: relative;
+	height: 460px;
+}
+
+
+.img-apartament{
+	max-width: 470px;
+	min-width: 470px;
+	position: absolute;
+}
+.mini-img{
+	position: absolute;
+	max-width: 100%;
+	min-width: 100%;
+	height: 41px;
+	left: 215px;
+	bottom:9px;
+}
+
+
+.mini-img img{
+	width: 45px;
+    height: 45px;
+	margin: auto;
+	border-radius: 50%;
+}
+
+
+
+.check-calendar{
+	width: 100%;
+	font-family: 'Lato';
+	text-align: left;
+	line-height: 13px;
+	letter-spacing: 0;
+	font-size: 16px;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+
+
+.text-plan{
+	width: 203px;
+	height: 19px;
+	margin-left: 180px;
+	text-align: left;
+	font-family: 'Lato';
+	letter-spacing: 0;
+	color: #575757;
+	position: absolute;
+	bottom: 0;
+	padding-top: 35px;
+}
+
+
+.arrow-imag-r{
+	width: 36px;
+	height: 36px;
+	border: 1px solid #E8E8ED;
+	opacity: 1;
+	border-radius: 50%;
+	position: absolute;
+	display: flex;
+	top: 237px;
+	left:0;
+	background-color: #FFFFFF;
+}
+.arrow-imag-l{
+	width: 36px;
+	height: 36px;
+	border: 1px solid #E8E8ED;
+	opacity: 1;
+	border-radius: 50%;
+	position: absolute;
+	display: flex;
+	top: 237px;
+	right:0;
+	background-color: #FFFFFF;
+}
+
+.arrow-l-imag{
+	width: 8px;
+	height: 12px;
+    text-align: center;
+    vertical-align: baseline;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+    margin: auto;
+}
+
+.arrow-r-imag{
+	height: 12px;
+    width: 8px;
+    text-align: center;
+    vertical-align: baseline;
+    margin: auto;
+}
+
+
+.info-apart-section{
+	width: 537px;
+
+}
+
+.info-propriety{
+	text-align: center;
+	height: 22px;
+	text-align: left;
+	font-family: 'Lato';
+	letter-spacing: 0;
+	color: #AEAEAE;
+	opacity: 1;
+	width: 100%;
+	padding-left: 10px;
+	margin: auto;
+	padding-bottom: 25px;
+	font-size: 18px;
+	}
+
+.imag-info-container{
+	width: 463px;
+	height: 500px;
+	padding-bottom: 53px;
+	padding-top: 50px;
+
+}
+
+.imag-container.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	background-color: white;
+	grid-row-gap : 2%;
+	grid-column-gap : 2%;
+}
+.info-container{
+	padding-bottom:53px;
+	padding-top: 25px;
+}
+
+
+.img-info{
+	width: 260px;
+	height: 232px;;
+	position: relative;
+}
+
+
+.img-apartam {
+	min-width: 100%;
+	max-width: 100%;
+	position: relative;
+	border-radius: 4px;
+}
+.img-info-p{
+	width: 100%;
+	position:absolute;
+	left: 0;
+	bottom: 0;
+	color: #FFFFFF !important;
+	text-align: left;
+	font-family: 'Lato';
+	background-color:rgba(0,0,0,0.5) !important;
+	padding-left: 15px;
+	height:38px;
+	margin-bottom: 0 !important;
+	line-height:38px;
+}
+
+.btn-info{
+	width: 76px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	font-family: 'Lato';
+/*	background: transparent url('img/1-1.png') 0% 0% no-repeat padding-box;*/
+	letter-spacing: 0;
+	color:#41A593 !important;
+	background-color: #FFFFFF !important;
+	height:38px;
+	margin-bottom: 0 !important;
+	line-height:38px;
+	}
+
+
+
+.apartament-facilities.container{
+	background: #FCFCFC;
+}
+
+.first-facilit{
+
+	width: 300px;
+	padding: 0;
+	text-align: left;
+	font-family: 'Lato';
+	color: #707070;
+	font-size: 16px;
+}
+
+
+.apartament-facilities{
+	width: 711px;
+	height: 500px;
+}
+
+
+.first-facilit img{
+	background-color:#FF7457;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+
+.apartament-facilities.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.gallery-photo-container{
+  background: #FCFCFC !important; 
+  }
+
+ 
+.body{
+  	background: #FCFCFC;
+  }
+
+
+.gallery-div{
+	background: rgba(65, 165, 147, 1) 0% 0% no-repeat padding-box;
+	width: 260px;
+	height: 24px;
+	opacity: 0.6;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 53px;
+}
+
+
+
+.gallery-paragraph{
+	min-width: 100%;
+	max-width: 100%;
+	bottom: 0;
+	left: 0;
+	height: 77px;
+	text-align: left;
+	font-family: 'Lato';
+	letter-spacing: 0;
+	color:rgba(0, 0, 0, 1);
+	font-size: 65px;
+	position: absolute;
+}
+
+
+.row{
+	flex-wrap:nowrap !important;
+	display: flex !important;
+   	overflow: hidden;
+}
+
+
+.img-gallery{
+	width: 100%;
+	height: auto;
+  	position: relative;
+  	padding-left: 0;
+  	background: transparent 0% 0% no-repeat padding-box;
+}
+
+
+.image-from-gallery{
+	max-width: 100%;
+	min-width: 100%
+}
+
+
+.img-gallery.last{
+	width:60%;
+	display:inline-block;
+	opacity: 0.2 !important;
+	margin-right: -35px;
+}
+
+
+.image-from-gallery.last {
+ 	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);	
+}
+
+
+.arrow-container {
+	position: relative;
+    float: right;
+    padding-right: 180px;
+    padding-top: 20px;
+}
+
+
+.arrow-left{
+	display: flex;
+	width: 40px;
+	height: 40px;
+	background-color: #E6E6E6;
+	margin-right:6px;
+	cursor: pointer;
+}
+
+
+
+.arrow-right{
+	display: flex;
+	width: 40px;
+	height: 40px;
+	background-color: #211111;
+	cursor: pointer;
+}
+
+
+.prev{
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: 8px;
+	height: 13px
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+}
+
+
+.next{
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: 8px;
+	height: 13px
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+}
+
+.map{
+	position: relative;
+	width: 1088px;
+	height: 492px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+
+.map-img{
+	max-width: 100%;
+	min-width: 100%;
+	height: 392px;
+	position: relative;
+}
+
+
+.map-container.container{
+	background: #FCFCFC;
+}
+
+
+.map-location{
+	position: absolute;
+	width: 184px;
+	height: 40px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #00000029;
+	opacity: 1;
+	top: 259px;
+	left: 704px;
+}
+
+
+.location-chat{
+	position: absolute;
+	width: 100%;
+	height: 0;
+}
+
+
+.location-chat:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    margin-left: -4px;
+    margin-bottom: -13px;
+}
+
+
+.map-icon{
+	background: white;
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	border-radius: 10%;
+	margin: auto;
+}
+
+
+.div-icon-map{
+	width: 38px;
+	height: 40px;
+	background:#F5F5F5;
+	display: flex;
+}
+
+
+.p-location{
+	margin-top: -30px;
+	font-family: 'Lato';
+	color:rgb(0,0,0,0.6);
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+	vertical-align: middle;
+
+
+
+
+}
+
+
+/*calendar*/
+
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+	margin: auto;
+	padding: 0;
+	border: none;
+	border-spacing: 0;
+}
+.calendar{
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.ui-datepicker {
+	position: relative;
+	cursor: default;
+	font-family: 'Lato';
+	font-size: 14px;
+}
+
+.ui-datepicker-header {
+    position: relative;
+}
+ 
+.ui-datepicker-title { 
+	text-align: center;
+    padding-bottom: 18px;
+ }
+ 
+.ui-datepicker-month {
+    position: relative;
+    font-weight: bold;
+}
+ 
+.ui-datepicker-year {
+    padding-left: 8px;
+    color: rgba(67, 66, 93, 1);
+    width: 90px;
+	height: 19px;
+	font-family: 'Lato';
+	font-weight: bold;
+}
+
+.ui-datepicker-month:before {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    color: rgba(67, 66, 93, 1);
+    width: 90px;
+	height: 19px;
+	font-family: 'Lato'; 
+}
+
+.ui-datepicker-prev {
+    position: absolute;
+    top: -2px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+ 
+
+ .ui-datepicker-next {
+    position: absolute;
+    top: -2px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+ 
+.ui-datepicker-prev {
+    left: 0;
+}
+ 
+.ui-datepicker-next {
+    right: 0;
+}
+ 
+.ui-datepicker-prev span,
+.ui-datepicker-next span{
+    display: block;
+    width: 5px;
+    height: 10px;
+    text-indent: -9999px;
+    background-image: url(./img/arrows.png);
+}
+ 
+.ui-datepicker-prev span { background-position: 0px 0px; }
+ 
+.ui-datepicker-next span { background-position: -5px 0px; }
+ 
+.ui-datepicker-prev-hover span { background-position: 0px -10px; }
+ 
+.ui-datepicker-next-hover span { background-position: -5px -10px; }
+
+
+.ui-datepicker-calendar th {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E9E9F0;
+	text-align: center;
+	font-family: 'Lato';
+	color: #A3A6B4;	
+}
+
+.ui-datepicker-calendar td {
+    padding: 0 7px;
+    text-align: center;
+    line-height: 26px;
+}
+ 
+.ui-datepicker-calendar .ui-state-default {
+    display: block;
+    width: 26px;
+    margin-top: 10px;
+    outline: none; 
+    text-decoration: none;
+    color: black;
+    border: 1px solid transparent;
+}
+ 
+.ui-datepicker-other-month .ui-state-default {
+ 	color: white;
+}
+
+
+
+
+
+
+.carousel {
+  width: 100%;
+}
+
+.slide-box {
+  display: flex;
+  justify-content: space-between;
+  margin:auto;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slide-box img {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 304px;
+   margin:auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slide-box img {
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    height: 304px;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .slide-box img {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: 304px;
+
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: .5rem;
+}
+
+
+.slide-box.p img{
+	padding: 8px;
+	border-radius: 15px;
+}
+
+/*	<div class="container">
+  <div class="row">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-none d-lg-block">
+            <div class="slide-box">
+              <img src="14-1@2x.png" alt="First slide">
+              <img src="17-2@2x.png" alt="First slide">
+              <img src="21-3@2x.png" alt="First slide">
+              <img src="2-2.png" alt="First slide">
+            </div>
+          </div>
+          <div class="d-none d-md-block d-lg-none">
+            <div class="slide-box">
+              <img src="17-2@2x.png" alt="First slide">
+              <img src="21-3@2x.png" alt="First slide">
+              <img src="2-2.png" alt="First slide">
+            </div>
+          </div>
+          <div class="d-none d-sm-block d-md-none">
+            <div class="slide-box">
+              <img src="21-3@2x.png" alt="First slide">
+              <img src="2-2.png" alt="First slide">
+            </div>
+          </div>
+          <div class="d-block d-sm-none">
+            <img class="d-block w-100" src="2-2.png" alt="First slide">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-none d-lg-block">
+            <div class="slide-box p">
+              <img src="a.jpg" alt="Second slide">
+              <img src="b.jpg" alt="Second slide">
+              <img src="c.jpg" alt="Second slide">
+              <img src="d.jpg" alt="Second slide">
+            </div>
+          </div>
+          <div class="d-none d-md-block d-lg-none">
+            <div class="slide-box p">
+             <img src="b.jpg" alt="Second slide">
+              <img src="c.jpg" alt="Second slide">
+              <img src="d.jpg" alt="Second slide">
+            </div>
+          </div>
+          <div class="d-none d-sm-block d-md-none">
+            <div class="slide-box p">
+              <img src="b.jpg" alt="Second slide">
+              <img src="c.jpg" alt="Second slide">
+            </div>
+          </div>
+          <div class="d-block d-sm-none">
+            <img src="b.jpg" alt="Second slide">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+*/
+
+
+.list.header {
+	font-weight: bold;
+	font-size: 120%;
+}
+.list.row * {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+}
+.list.row {
+	display: inline-block;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 10px;
+}
+.list.row > div {
+	border-right: 2px solid #ccc;
 }

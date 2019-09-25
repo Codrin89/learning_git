@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Ac Pearl</title>
+	<link rel="stylesheet" href="style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/jquery-ui-datepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="social_header" class="social_header container">
@@ -88,11 +94,265 @@
 						<button class="btn btn-plus">+</button>
 						<img src="assets/guests_icon.svg" />
 					</div>
-					
 				</div>
 				<div class="input-wrapper">
 					<label style="color: #fff;">Request</label>
 					<button class="btn btn-green">Request</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="calendar-apartament-container container ">
+		<div class="apartament-container">
+			<img src="48-1.png" class="img-apartament">
+				<div class="arrow-container-apartament-imag ">
+		<div class="arrow-imag-l">
+			<img src="arrow-point-to-right (6).svg" class="arrow-l-imag">
+		</div>
+		<div class="arrow-imag-r">
+			<img src="arrow-point-to-right (6).svg" class="arrow-r-imag">
+		</div>
+	</div>
+			<div class="mini-img " >
+				<img src="34-1@2x.png " class="">
+				<img src ="40-1@2x.png" class="">
+			</div>
+			<div class="text-plan">
+			-See apartament's floor plan-
+		</div>
+		</div>
+		<div class="calendar-div">
+			<div class="calendar-container ">
+				<p class="check-calendar">Chec availability here</p>
+					<div id="calendar"></div>
+						<script>
+							$('#calendar').datepicker({
+								inline: true,
+								firstDay: 1,
+								showOtherMonths: true,
+								dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+							});
+						</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="calendar-apartament-container2 container ">
+		<div class=" info-container">
+			<div class=" row info-apart-section" style="margin-bottom: 30px;">
+				<div class=" col-4 info-propriety" style= "text-align: center; border-bottom :3px solid #CBCBCB;">Propriety details</div>
+				<div class=" col-4 info-propriety" style="color: #41A593 ;text-align: center; border-bottom :3px solid #41A593;">Propriety facilities</div>
+				<div class=" col-4 info-propriety" style="text-align: center;border-bottom :3px solid #CBCBCB;">House rules</div>
+			</div>
+			<div class="apartament-facilities container">
+				<div class="first-facilit">
+					<img src="lock (1).svg" >
+					Private locker for each room
+				</div>
+				<div class="first-facilit">
+					<img src="desktop.svg">
+					TV
+				</div>
+				<div class="first-facilit">
+					<img src="wifi.svg">
+					High speed Wi-Fi internet
+				</div>
+				<div class="first-facilit">
+					<img src="bed (1).svg">
+					Clean bed sheets
+				</div>
+				<div class="first-facilit">
+					<img src="balcony.svg">
+					2 balconies
+				</div>
+				<div class="first-facilit">
+					<img src="toiletries.svg">
+					Toiletries
+				</div>
+				<div class="first-facilit">
+					<img src="stove.svg">
+					Stove
+				</div>
+				<div class="first-facilit">
+					<img src="toilet.svg">
+					Private bathroom
+				</div>
+					<div class="first-facilit">
+					<img src="fridge.svg">
+					Fridge
+				</div>
+				<div class="first-facilit">
+					<img src="hair-dryer.svg">
+					Hair dryer
+				</div>
+				<div class="first-facilit">
+					<img src="microwave.svg">
+					Microwave
+				</div>
+				<div class="first-facilit">
+					<img src="couch.svg">
+					Siting area
+				</div>
+				<div class="first-facilit">
+					<img src="dish.svg">
+					Dining dishes / Pans for cooking
+				</div>
+				<div class="first-facilit">
+					<img src="slippers.svg">
+					Slippers
+				</div>
+				<div class="first-facilit">
+					<img src="wine.svg">
+					Cups and glasses
+				</div>
+				<div class="first-facilit">
+					<img src="iron.svg">
+					Iron and Iron board
+				</div>
+				<div class="first-facilit">
+					<img src="washing-machine.svg">
+					Washing machine
+				</div>
+				<div class="first-facilit">
+					<img src="towel.svg">
+					Fresh towels
+				</div>
+				<div class="first-facilit">
+					<img src="dining-table.svg">
+					Dining Table
+				</div>
+			</div>
+		</div>
+		<div class="imag-info-container">
+			<div class="imag-container container">
+					<div class="img-info ">
+						<img src="photo.png " class="img-apartam" >
+						<p class="img-info-p"> Classic Stone </p>
+						<p class="btn-info">Details</p>
+					</div>
+					<div class="img-info ">
+						<img src="photo.png " class="img-apartam" >
+						<p class="img-info-p"> Classic Stone </p>
+						<p class="btn-info">Details</p>
+					</div>
+					<div class="img-info ">
+						<img src="photo.png " class="img-apartam" >
+						<p class="img-info-p"> Classic Stone </p>
+						<p class="btn-info">Details</p>
+					</div>
+					<div class="img-info ">
+						<img src="photo.png " class="img-apartam" >
+						<p class="img-info-p"> Classic Stone </p>
+						<p class="btn-info">Details</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="gallery-photo-container container">
+		<div class="gallery-container">
+			<div class="gallery-div">
+				<p class="gallery-paragraph">Gallery</p>
+			</div>
+		</div>
+	<div class=" photo-container container">
+	  <div class="row">
+	    <div id="carousel" class="carousel slide" data-ride="carousel">
+	      <ol class="carousel-indicators">
+	        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#carousel" data-slide-to="1"></li>
+	      </ol>
+	      <div class="carousel-inner">
+	        <div class="carousel-item active">
+	          <div class="d-none d-lg-block">
+	            <div class="slide-box">
+	              <img src="14-1@2x.png" alt="First slide">
+	              <img src="17-2@2x.png" alt="First slide">
+	              <img src="21-3@2x.png" alt="First slide">
+	              <img src="2-2.png" alt="First slide">
+	            </div>
+	          </div>
+	          <div class="d-none d-md-block d-lg-none">
+	            <div class="slide-box">
+	              <img src="17-2@2x.png" alt="First slide">
+	              <img src="21-3@2x.png" alt="First slide">
+	              <img src="2-2.png" alt="First slide">
+	            </div>
+	          </div>
+	          <div class="d-none d-sm-block d-md-none">
+	            <div class="slide-box">
+	              <img src="21-3@2x.png" alt="First slide">
+	              <img src="2-2.png" alt="First slide">
+	            </div>
+	          </div>
+	          <div class="d-block d-sm-none">
+	            <img class="d-block w-100" src="2-2.png" alt="First slide">
+	          </div>
+	        </div>
+	        <div class="carousel-item">
+	          <div class="d-none d-lg-block">
+	            <div class="slide-box p">
+	              <img src="a.jpg" alt="Second slide">
+	              <img src="b.jpg" alt="Second slide">
+	              <img src="c.jpg" alt="Second slide">
+	              <img src="d.jpg" alt="Second slide">
+	            </div>
+	          </div>
+	          <div class="d-none d-md-block d-lg-none">
+	            <div class="slide-box p">
+	             <img src="b.jpg" alt="Second slide">
+	              <img src="c.jpg" alt="Second slide">
+	              <img src="d.jpg" alt="Second slide">
+	            </div>
+	          </div>
+	          <div class="d-none d-sm-block d-md-none">
+	            <div class="slide-box p">
+	              <img src="b.jpg" alt="Second slide">
+	              <img src="c.jpg" alt="Second slide">
+	            </div>
+	          </div>
+	          <div class="d-block d-sm-none">
+	            <img src="b.jpg" alt="Second slide">
+	          </div>
+	        </div>
+	      </div>
+	      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+	        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	        <span class="sr-only">Previous</span>
+	      </a>
+	      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+	        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	        <span class="sr-only">Next</span>
+	      </a>
+	    </div>
+	  </div>
+	</div>
+	</div>
+	</div>
+
+
+
+
+	<div class="list-ap">
+		<div class="row header">
+			<img name="slide" width="400" height="200" />
+		</div>
+	</div>
+
+
+
+	<div class="map-container container">
+		<div class="map">
+			<img src="map@2x.png" class="map-img">
+				<div class="map-location ">
+					<div class="div-icon-map">
+						<img src="pin_green_icon.svg" class="map-icon ">
+					</div>
+					<div class="location-chat ">
+						<p class="p-location">
+						You will stay here
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -132,4 +392,5 @@
 		<a class="">Terms and Conditions</a>
 	</div>
 </body>
+    <script src="style.js"></script>
 </html>
