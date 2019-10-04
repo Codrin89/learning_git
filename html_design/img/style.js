@@ -1,5 +1,5 @@
 
-let arrayOfImages = ["img/14-1@2x.png","img/17-2@2x.png","img/21-3@2x.png","img/2-2.png",'img/a.jpg', 'img/b.jpg', 'img/c.jpg', 'img/d.jpg']; 
+let arrayOfImages = ["14-1@2x.png","17-2@2x.png","21-3@2x.png","2-2.png",'a.jpg', 'b.jpg', 'c.jpg', 'd.jpg']; 
 
 arrayOfImages.forEach(function(image) {  
 	let imgA = document.createElement('img'); 

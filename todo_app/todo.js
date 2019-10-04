@@ -176,10 +176,7 @@ function validateName(){
    	 }
    	}
   	localStorage.setItem('book-info', JSON.stringify(carteLista));
-
 };
-
-
 function validateNameUp(){
 	const nameV = document.getElementById("update-name").value;
 	const carteLista = JSON.parse(localStorage.getItem('book-info'));
@@ -189,17 +186,12 @@ function validateNameUp(){
    	 }
    	}
   	localStorage.setItem('book-info', JSON.stringify(carteLista));
-
 }
-
-
 
 document.getElementById('sortByName').addEventListener("click", sortByNameFunction,true);
 document.getElementById('sortByAutor').addEventListener("click", sortByAutorFunction,true);
 document.getElementById('sortByAn').addEventListener("click", sortByAnFunction,true);
 document.getElementById('sortByTip').addEventListener("click", sortByTipFunction,true);
-
-
 
 function show_hide() {
 	let click = document.getElementById('ordonareul');
@@ -304,4 +296,33 @@ function searchName() {
 	renderList(itemSearch);
 };
 
+function getTranslateX() {
+	let myElement = document.querySelector('#carousel-img');
+  			var style = window.getComputedStyle(myElement);
+  			var matrix = new WebKitCSSMatrix(style.webkitTransform);
+  				return matrix.m41;
+}
+
+function prevBtn(){
+
+	if((arrayOfImages.length -5) * -282 < getTranslateX() *1 ) {
+		document.getElementById("carousel-img").style.webkitTransform = "translateX(" +(getTranslateX() +282 )+"px)";
+	}
+}; 
+ 
+function nextBtn(){
+	if ((arrayOfImages.length - 4) * 282 > getTranslateX() * -1) {
+			document.getElementById("carousel-img").style.WebkitTransform = "translateX(" +(getTranslateX() -282 )+"px)";
+	}
+
+}; 
+
+
+
+function validateCarousel(){
+	const imgAA = document.querySelector(".newImag");
+  		if (imgAA[i] !== undefined && imgAA[i] !== null && imgAA[i] !== ""){
+       getTranslateX()
+   		}
+}
 
