@@ -1,3 +1,4 @@
+
  function renderList(carteLista) {  
 	document.getElementsByClassName('list')[0].innerHTML="";
 	if(carteLista) {
@@ -325,4 +326,5 @@ function validateCarousel(){
        getTranslateX()
    		}
 }
+
 

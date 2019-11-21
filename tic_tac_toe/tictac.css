@@ -1,0 +1,129 @@
+  .tictactoe-title{
+  text-align: center;
+  font-size: 24px
+  }
+  .game.container{
+  width: 400px;
+  height: 400px;
+  padding-top: 30px;
+  margin:auto;
+}
+.mini.col-4{
+  border: 2px solid #757575;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #F5F5F5;
+}
+.choose-btn{
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    width: 98px;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+#reset{
+  background: none;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+.btn.btn-primary{
+    color: #fff;
+    width: 159px;
+    background-color: #009688;
+    border-color:  #009688;
+}
+.btn.focus, .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,175,0,0.3) !important;
+}
+.btn.btn-primary:hover{
+    color: black;
+    background-color:#F5F5F5 !important;
+    border-color:  #009688 !important;
+}
+.fa {
+    color: #009688;
+    font-size: 25px;
+}
+.nav.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+.reset-btn{
+    float: right;
+    color: #fff;
+    width: 159px;
+    background-color: #009688;
+    cursor: pointer;
+    border-color:  #009688;
+}
+.reset-btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,175,0,0.3) !important;
+}
+.reset-btn:hover{
+    color: black;
+    background-color:#F5F5F5 !important;
+    border-color:  #009688 !important;
+}
+.choose{
+  float: left;
+}
+.game td{
+    border: 2px solid #757575;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #F5F5F5;
+    width:100px;
+    height:100px;
+    text-align:center;
+    font-size:40pt;
+    border-radius:10px;
+    box-sizing:border-box;
+}
+
+.game .game-title{
+    padding: 10px;
+    text-align:center;
+}
+
+.game .player{
+    float:left;
+    text-align:center;
+    width: 25%;
+}
+.game .player .selected:before{
+  content: "Next move by";
+  font-size: 15px;
+}
+.tictactoe-board{
+    text-align:center;
+    margin:0 auto;
+    width:50%;
+    padding-top:20px;
+}
+
+.tictactoe-board table{
+    float:left;
+    width: 50%;
+}
+.tictactoe-board-score1{
+    float:left;
+    width:20%;
+}
+
+.tictactoe-board-score2{
+    float:left;
+    width:20%;
+}
+.clear
+    clear:both;
+}
+
+
+
+
+

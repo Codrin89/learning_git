@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tictactoe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="tictac1.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container tictactoe">
+			<p class="tictactoe-title">
+				Tic Tac Toe
+			</p>
+			<div class="nav container">
+				<div class="choose ">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+						Choose ypur figure
+					</button>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title text-center">Tic Tac Toe Game</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								</div>
+								<div class="modal-body">
+									<p>It’s time to choose your figure.</p>
+									
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="x" class="btn" data-dismiss="modal" onClick="iconX() "><span class="fa fa-times"></span></button>
+									<button type="button" id="o" class="btn" data-dismiss="modal" onClick="iconO() "><span class="fa fa-circle-o"></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reset" >
+					<button class="reset-btn" onclick="reset();" > 
+						Reset game
+					</button>
+				</div>
+			</div>
+
+	        <div id="game " class="row">
+	        	<div class="player col-3" contenteditable="true" >
+	           		<span class="fa fa-times" style="display: none ;" id="player1-times"></span>
+           			<span class="fa fa-circle-o" style="display: none ;" id="player1-circle"></span>
+	            	<form>
+						<input id="word1" placeholder="Enter you name"></input>
+						<input type="button" value="Save " id="submitButton1"></input>
+					</form>
+					<p id="story1">Player 1 : </p>
+	            </div>
+	            <div class="col-6">
+			        <table >
+						<tr>
+							<td>
+								<button class="cell" id="cell_00" type="button" onclick="clickH(this)"></button>
+							</td>
+							<td>
+								<button class="cell" id="cell_01" type="button" onclick="clickH(this)"></button>
+							</td>
+							<td>
+								<button class="cell" id="cell_02" type="button" onclick="clickH(this)"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="cell" id="cell_10" type="button" onclick="clickH(this)"></button>
+							</td>
+							<td>
+								<button class="cell" id="cell_11" type="button" onclick="clickH(this)"></button>
+							</td>
+							<td>
+								<button class="cell" id="cell_12" type="button" onclick="clickH(this)"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="cell" id="cell_20" type="button" onclick="clickH(this)"></button>
+							</td>
+							<td>
+								<button class="cell" id="cell_21" type="button" onclick="clickH(this)"></button>
+							</td>
+							<td>
+								<button class="cell" id="cell_22" type="button" onclick="clickH(this)"></button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="player col-3" contenteditable="true">
+	            	<span class="fa fa-times" style="display: none ;" id="player2-times"></span>
+           			<span class="fa fa-circle-o" style="display: none ;" id="player2-circle"></span>
+	            	<form>
+						<input id="word" placeholder="Enter you name"></input>
+						<input type="button" value="Save " id="submitButton"></input>
+					</form>
+					<p id="story">Player 2 : </p>
+	            </div>
+	        </div>
+	    </div>
+        <script src="tictac1.js"></script>
+    </body>
+</html>
+
+
+
+

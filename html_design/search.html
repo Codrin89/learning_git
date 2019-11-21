@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport"  content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+
+
 	<title>Ac Pearl</title>
 	<link rel="stylesheet" href="style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -8,13 +10,21 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="js/jquery-ui-datepicker.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <script src="jquery-3.4.1.min.js"></script> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 
 </head>
 <body>
@@ -35,7 +45,7 @@
 						<img class="logo" src="assets/logo@2x.png" />
 					</a>
 				</li>
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class="nav-link" href="#">Holiday Apartaments</a>
 				</li>
 				<li class="nav-item">
@@ -58,6 +68,100 @@
 			</ul>
 		</div>
 	</div>
+
+<!-- nav4 -->
+
+
+<nav id="nav4">
+	<img  id="logo_nav" src="assets/logo@2x.png"/>
+	<div class="container-modal">
+	    <div class="container-nav4">
+	        <input id="responsive-menu" type="checkbox">
+	        <label class="nav-label" for="responsive-menu"> 
+	            <span id="menu-icon" ></span>
+	        </label>
+	        <div id="overlay"></div>
+	        <ul class="nav-ul">
+	            <li class="nav-li"><a   href="#">Holiday Apartaments</a></li>
+	            <li><a  href="#">Tours & Adventure</a></li>
+	            <li><a  href="#">City Guide</a></li>
+	            <li><a  href="#">Trip Planner</a></li>
+	            <li><a  href="#">Contact</a></li>
+	        </ul>
+	    </div>
+	  <div class="modalSearch">
+	        <div class="modalButtonSearch">
+	            <button type="button" class="btn btn-modal-search" id="btn-icon"  onclick="hideClose()" data-toggle="modal" data-target="#form">
+	                <i class="fas fa-search" id="favIcon" > </i>&nbsp;
+	            </button>  
+	         <!--    <button  id="dia" type="button" class="close" data-dismiss="modal" onclick="();" aria-label="Close">
+             	   <span aria-hidden="true">&times;</span>
+                </button> -->
+	        </div>
+	        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style=" background-color: grey" aria-hidden="true">
+	            <div class="modal-dialog modal-dialog-centered" role="document">
+	                <div class="modal-content">
+	                    <div class="modal-header border-bottom-0">
+	                        <div class="tab-list-m">
+	                            <div class="tab-item-m active" onclick="showSectionSearch('1')">
+	                                Apartaments
+	                            </div>
+	                            <div class="tab-item-m" onclick="showSectionSearch('2')">
+	                                Tours&Attractions
+	                            </div>
+	                            <div class="tab-item-m" onclick="showSectionSearch('3')">
+	                                Experiences
+	                            </div>
+	                        </div >
+	                       <!--  <button  id="dia" type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">&times;</span>
+	                        </button> -->
+	                    </div >
+	                    <div  id="search_div_1">
+	                        <form>
+	                            <div class="modal-body">
+	                                <div class="form-group">
+	                                    <label class="label-modal">Check in</label>
+	                                    <input type="text" class="input-date datem" autocomplete="off" onclick="show_dp_in1()" id="datepick3" style="cursor: pointer;"placeholder="Check in">
+	                                </div>
+	                                <div class="form-group">
+	                                    <label class="label-modal">Check out</label>
+	                                    <input type="text" class="input-date datem" autocomplete="off" onclick="show_dp_out1()" id="datepick4" style="cursor: pointer;"
+	                                    name="checkout" placeholder="Check out" />
+	                                </div>
+
+	                                <div class="form-group">
+	                                    <label class="label-modal" >Kids </label>
+	                                    <div class="form-group-modal" style="width: 100%; display: inline-block;">
+	                                        <input type="number" class="input-number numberm" id="kids1" value="0" name="kids1"/>
+	                                        <button class="btn btn-plus-kids" onclick="incrementValueKids1()" > + </button>
+	                                        <img src="assets/kids_icon.svg" />
+	                                    </div>
+	                                </div>
+
+	                                <div class="form-group">
+	                                    <label class="label-modal">Guests </label>
+	                                    <div class="form-group-modal" style="width: 100%; display: inline-block;">
+	                                        <input type="number" class="input-number numberm" id="guests1" name="guests1" value="0" />
+	                                        <button class="btn btn-plus-guests" onclick="incrementValueGuests1()"> + </button>
+	                                        <img src="assets/guests_icon.svg" />
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+	                                <button class="btn btn-green">Request</button>
+	                            </div>
+	                        </form>
+	                    </div>
+	                    <div id="search_div_2"></div>
+	                    <div id="search_div_3"></div>
+	                </div>
+	            </div>
+	        </div>
+	        </div>
+	    </div>
+	</div>
+</nav>
 	<div id="search-container" class="search-container container-fluid p-0">
 		<img class="w-100" src="assets/apartment-bedroom-ceiling-1082355.png" />
 		<div class="search-wrapper container">
@@ -74,18 +178,19 @@
 			</div>
 			<div class="search-elements">
 				<div class="input-wrapper">
-					<label>Check in</label>
-					<input type="text" class="input-date" id="checkin" name="checkin" placeholder="Check in" />
+					<label>Check in </label>
+					<input  type="text" class="input-date " onclick="show_dp_in()" id="datepick1" autocomplete="off" style="cursor: pointer;" name="checkin" placeholder="Check in" />
 				</div>
 				<div class="input-wrapper">
 					<label>Check out</label>
-					<input type="text" class="input-date" id="checkout" name="checkout" placeholder="Check out" />
+					<input type="text" class="input-date " onclick="show_dp_out()" autocomplete="off" id="datepick2" style="cursor: pointer;"
+					 name="checkout" placeholder="Check out" />
 				</div>
 				<div class="input-wrapper">
 					<label>Kids</label>
 					<div class="input-number-wrapper">
-						<input type="text" class="input-number" id="kids" name="kids" value="0" />
-						<button class="btn btn-plus">+</button>
+						<input type="text" class="input-number" id="kids" value="0" name="kids"/>
+						<button class="btn btn-plus" onclick="incrementValueKids()" >+</button>
 						<img src="assets/kids_icon.svg" />
 					</div>
 				</div>
@@ -93,7 +198,7 @@
 					<label>Guests</label>
 					<div class="input-number-wrapper">
 						<input type="text" class="input-number" id="guests" name="guests" value="0" />
-						<button class="btn btn-plus">+</button>
+						<button class="btn btn-plus" onclick="incrementValueGuests()">+</button>
 						<img src="assets/guests_icon.svg" />
 					</div>
 				</div>
@@ -104,37 +209,46 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="calendar-apartament-container container ">
 		<div class="apartament-container">
-			<img src="img/48-1.png" class="img-apartament">
-				<div class="arrow-container-apartament-imag ">
-		<div class="arrow-imag-l">
-			<img src="img/arrow-point-to-right (6).svg" class="arrow-l-imag">
-		</div>
-		<div class="arrow-imag-r">
-			<img src="arrow-point-to-right (6).svg" class="arrow-r-imag">
+			<div class="posirel">
+				<img src="img/48-1.png" class="img-apartament">
+				<div class=" arrow-image" >
+		  			<span class="btn_t" role="button" >
+			        	<img  class="arroww_left" src="img/arrow-point-to-right (6).svg"> </span>
+			    	</span>
+		  			<span class=" btn_t"  role="button" >
+			        	<img  class="arroww_right" src="img/arrow-point-to-right (6).svg"> </span>
+			    	</span>
+				</div>
+				<div class="mini-img  " >
+					<img src="img/34-1@2x.png " class="">
+					<img src ="img/40-1@2x.png" class="">
+				</div>
+			</div>
+		<div class="plan-position">
+			<span class="text-plan">
+				-See apartament's floor plan-
+			</span>
 		</div>
 	</div>
-			<div class="mini-img " >
-				<img src="img/34-1@2x.png " class="">
-				<img src ="img/40-1@2x.png" class="">
-			</div>
-			<div class="text-plan">
-			-See apartament's floor plan-
-		</div>
-		</div>
 		<div class="calendar-div">
 			<div class="calendar-container ">
 				<p class="check-calendar">Chec availability here</p>
 					<div id="calendar"></div>
-						<script>
-							$('#calendar').datepicker({
-								inline: true,
-								firstDay: 1,
-								showOtherMonths: true,
-								dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-							});
-						</script>
 				</div>
 			</div>
 		</div>
@@ -142,87 +256,158 @@
 
 	<div class="calendar-apartament-container2 container ">
 		<div class=" info-container">
-			<div class=" row info-apart-section" style="margin-bottom: 30px;">
-				<div class=" col-4 info-propriety" style= "text-align: center; border-bottom :3px solid #CBCBCB;">Propriety details</div>
-				<div class=" col-4 info-propriety" style="color: #41A593 ;text-align: center; border-bottom :3px solid #41A593;">Propriety facilities</div>
-				<div class=" col-4 info-propriety" style="text-align: center;border-bottom :3px solid #CBCBCB;">House rules</div>
+			<div class=" row info-apart-section" style="margin-bottom: 3%;">
+				<div class=" btnP col-4 info-propriety " onclick="showDiv('1')">Propriety details</div>
+				<div class=" btnP col-4 info-propriety " onclick="showDiv('2')">Propriety facilities</div>
+				<div class=" btnP col-4 info-propriety"  onclick="showDiv('3')">House rules</div>
 			</div>
-			<div class="apartament-facilities container">
-				<div class="first-facilit">
-					<img src="img/lock (1).svg" >
-					Private locker for each room
+
+			<div class="apartament-facilities container" id="contact_div_1" >
+				<div class="display">
+				<div class="facil1">
+					<div class=" facilitDiv">
+						<div class="first-facilit icon1">
+						</div>
+							<p class="facilit-info">
+							Private locker for each room
+						</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon2">
+						</div>
+							 <p class="facilit-info">
+								TV
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon3">
+						</div>
+							 <p class="facilit-info">
+								High speed Wi-Fi internet
+							 </p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon4">
+						</div>
+						 	<p class="facilit-info">
+								Clean bed sheets
+							 </p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon5">
+						</div>
+						 	<p class="facilit-info">
+								2 balconies
+							 </p>
+					</div>
+					<div class=" facilitDiv">  
+						<div class="first-facilit icon6">
+						</div>
+							 <p class="facilit-info">
+								Toiletries
+							 </p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon7">
+						</div>
+							<p class="facilit-info">
+								Stove
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon8">
+						</div>
+							<p class="facilit-info">
+								Private bathroom
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon9">
+						</div>
+							<p class="facilit-info">
+								Fridge
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon10">
+						</div>
+							<p class="facilit-info">
+								Hair dryer
+							</p>
+					</div>
 				</div>
-				<div class="first-facilit">
-					<img src="img/desktop.svg">
-					TV
+				<div class="facil2">
+					<div class=" facilitDiv">
+						<div class="first-facilit icon11">
+						</div>
+							<p class="facilit-info">
+								Microwave
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon12">
+						</div>
+							<p class="facilit-info">
+								Siting area
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon13">
+						</div>
+							<p class="facilit-info">
+								Dining dishes
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon14">
+						</div>
+							<p class="facilit-info">
+								Slippers
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon15">
+						</div>
+							<p class="facilit-info">
+								Cups and glasses
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon16">
+						</div>
+							<p class="facilit-info">
+								Iron and Iron board
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon17">
+						</div>
+							<p class="facilit-info">
+								Washing machine
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon18">
+						</div>
+							<p class="facilit-info">
+								Fresh towels
+							</p>
+					</div>
+					<div class=" facilitDiv">
+						<div class="first-facilit icon19">
+						</div>
+							<p class="facilit-info" >
+								Dining Table
+							</p>
+					</div>
 				</div>
-				<div class="first-facilit">
-					<img src="img/wifi.svg">
-					High speed Wi-Fi internet
-				</div>
-				<div class="first-facilit">
-					<img src="img/bed (1).svg">
-					Clean bed sheets
-				</div>
-				<div class="first-facilit">
-					<img src="img/balcony.svg">
-					2 balconies
-				</div>
-				<div class="first-facilit">
-					<img src="img/toiletries.svg">
-					Toiletries
-				</div>
-				<div class="first-facilit">
-					<img src="img/stove.svg">
-					Stove
-				</div>
-				<div class="first-facilit">
-					<img src="img/toilet.svg">
-					Private bathroom
-				</div>
-					<div class="first-facilit">
-					<img src="img/fridge.svg">
-					Fridge
-				</div>
-				<div class="first-facilit">
-					<img src="img/hair-dryer.svg">
-					Hair dryer
-				</div>
-				<div class="first-facilit">
-					<img src="img/microwave.svg">
-					Microwave
-				</div>
-				<div class="first-facilit">
-					<img src="img/couch.svg">
-					Siting area
-				</div>
-				<div class="first-facilit">
-					<img src="img/dish.svg">
-					Dining dishes / Pans for cooking
-				</div>
-				<div class="first-facilit">
-					<img src="img/slippers.svg">
-					Slippers
-				</div>
-				<div class="first-facilit">
-					<img src="img/wine.svg">
-					Cups and glasses
-				</div>
-				<div class="first-facilit">
-					<img src="img/iron.svg">
-					Iron and Iron board
-				</div>
-				<div class="first-facilit">
-					<img src="img/washing-machine.svg">
-					Washing machine
-				</div>
-				<div class="first-facilit">
-					<img src="img/towel.svg">
-					Fresh towels
-				</div>
-				<div class="first-facilit">
-					<img src="img/dining-table.svg">
-					Dining Table
+			</div>
+		</div>
+			<div id="contact_div_2" >
+			</div>
+
+			<div id="contact_div_3" >
+				<div class="display3">
 				</div>
 			</div>
 		</div>
@@ -251,7 +436,8 @@
 				</div>
 			</div>
 		</div>
-	<div class="gallery-photo-container container">
+
+	<div class="gallery-photo-container container" >
 		<div class="gallery-container">
 			<div class="gallery-div">
 				<p class="gallery-paragraph">Gallery</p>
@@ -333,7 +519,7 @@
 </div>
 	<div class="list-ap  ">
 		<div class="parent-carousel container">
-	  		<div id="carousel-img" class="carousel overflow active row">
+	  		<div id="carousel-img" class="carousel overflow  row">
 	  		</div>
   			<div class=" arrow-container-img">
 	  			<a class="btnleft" href="#carousel-img" role="button" onclick="prevBtn()"  data-slide="prev">
@@ -350,27 +536,23 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
 	<div class="map-container container">
 		<div class="map">
+			<div class="relative_position">
 			<img src="img/map@2x.png" class="map-img">
-				<div class="map-location ">
-					<div class="div-icon-map">
-						<img src="img/pin_green_icon.svg" class="map-icon ">
+					<div class="map-location ">
+						<div class="div-icon-map">
+							<img src="img/pin_green_icon.svg" class="map-icon ">
+						</div>
+						<div class="location-chat ">
+							<p class="p-location">
+							You will stay here
+							</p>
+						</div>
 					</div>
-					<div class="location-chat ">
-						<p class="p-location">
-						You will stay here
-						</p>
-					</div>
-				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<div id="contact-container" class="container presentation-container contact-container">
 		<div class="contact-form text-center">

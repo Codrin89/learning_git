@@ -1,0 +1,161 @@
+
+
+#canvas{
+	height: 300px;
+        width: 600px;
+        margin: auto;
+        margin-top: 75px;
+        background-color: black;
+}
+/*let canv = document.getElementById('canvas');
+let cnv = canv.getContext("2d");
+
+function init(){
+	leftP();
+	rightP();
+	moveCircle();
+}
+window.onload = init;
+
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+let radius = 5;
+let positionX = 150;
+let positionY = 75;
+let vX = 3;
+let vY = 3;
+let canvasWidth = canv.width;
+let canvasHeight = canv.height;
+function drawCircle() {
+    cnv.clearRect(0, 0, 600, 300);
+    cnv.beginPath();
+    cnv.fillStyle = "white";
+    cnv.arc(positionX, positionY, radius, 0, Math.PI * 2, false);
+    cnv.fill();
+    cnv.closePath();
+
+}
+let score1 = document.getElementById('score1');
+let score2 = document.getElementById('score2');
+function moveCircle() {
+	if (positionY >= canvasHeight - radius || positionY <= radius ) {
+	    vY = -vY;
+	}
+	if (positionX > canvasWidth - radius || positionX < radius) {
+	    vX *= -1;
+	}
+	// let objR = objectR.getBoundingClientRect();
+	// let objL = object.getBoundingClientRect();
+	if(positionY.height >= canvasWidth - objectR.height){ 
+		resetBall();
+		score1 += 1;
+		alert('fsedfed')
+	}
+
+	if(positionY.height >= objectL.y + objectL.height){ 
+		resetBall();
+		score2 += 1;
+	}
+	positionX += vX;
+	positionY += vY;
+	drawCircle();
+	leftP();
+	rightP();
+	requestAnimationFrame(moveCircle);
+}
+
+
+
+
+
+const winScore = 10;
+
+function checkWinScore() {
+	if(score1 >= winScore) {
+		canvasContext.fillText("hou Won!", 350, 200);
+	} else if(score2 >= winScore) {
+		canvasContext.fillText("you Lost",350,200);
+	}
+	canvasContext.fillText("click to continue", 350, 300);
+		return;
+	}
+
+function resetBall(){
+drawCircle()
+}
+
+let objectL = {
+	height: 40,
+	width: 4,
+	x: 1,
+	y: 10, 
+};
+document.addEventListener('keydown', function(event) {
+	if(event.keyCode == 38 && objectL.y > 0 ) {
+		objectL.y -= 5;
+	}
+	if(event.keyCode == 40 && objectL.y < 110 ) {
+		objectL.y += 5;
+	}
+	requestAnimationFrame(leftP);
+});
+
+function leftP(){
+	cnv.fillStyle = "white";
+	cnv.fillRect(objectL.x, objectL.y, objectL.width, objectL.height);
+};
+
+let objectR = {
+	height: 40,
+	width: 4,
+	x: 295,
+	y: 10, 
+};
+function nam(){
+let obj = objectR.getBoundingClientRect();
+console.log(obj);}
+
+document.addEventListener('keydown', function(event) {
+	if(event.keyCode == 87 & objectR.y > 0 ) {
+		objectR.y -= 5;
+	}
+	if(event.keyCode == 83 & objectR.y < 110 ) {
+		objectR.y += 5;
+	}
+	requestAnimationFrame(rightP);
+});
+
+function rightP(){
+	cnv.fillStyle = "white";
+	cnv.fillRect(objectR.x, objectR.y, objectR.width, objectR.height);
+}
+
+function reset_tbn(){
+	window.location.reload(true);
+}
+
+
+// function myFunction() { 
+// 	let obj = document.querySelector(objectL)
+//     let rectangle = obj.getBoundingClientRect(); 
+//     x = rectangle.left; 
+//     y = rectangle.top; 
+//     w = rectangle.width; 
+//     h = rectangle.height; 
+//     console.log("Left:" + x + ", Top:" + y + 
+//         ", Width:" + w + ", Height:" + h); 
+// }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="tictac.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="tictac.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container tictactoe">
+			<p class="tictactoe-title">
+				Tic Tac Toe
+			</p>
+			<div class="nav container">
+				<div class="choose ">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+						Choose ypur figure
+					</button>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title text-center">Tic Tac Toe Game</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								</div>
+								<div class="modal-body">
+									<p>It’s time to choose your figure.</p>
+									<p id="test"></p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="x" class="btn" data-dismiss="modal" onClick="iconX() "><span class="fa fa-times"></span></button>
+									<button type="button" id="o" class="btn" data-dismiss="modal" onClick="iconO() "><span class="fa fa-circle-o"></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reset" >
+					<button class="reset-btn" onclick="reset();addFigure();" > 
+						Reset game
+					</button>
+				</div>
+			</div>
+	        <div class="game">
+	            <div class="game-title" contenteditable="true">Next move by:</div>
+	            <div class="player" contenteditable="true">
+	           		Player 1
+	           		<span class="fa fa-times" style="display: none ;" id="player1-times"></span>
+           			<span class="fa fa-circle-o" style="display: none ;" id="player1-circle"></span>
+	            	<input type="" name="" placeholder="enter your bname">
+	           		<div style="font-size:30pt;" id="player1" class="selected" contenteditable="true">
+	            		
+	           		</div>
+	            </div>
+	            <table id="game" class="tictactoe" style="float:left;width:45%;" contenteditable="true">
+	            </table>
+	            <div class="player" contenteditable="true">
+	            	Player 2
+	            	<span class="fa fa-times" style="display: none ;" id="player2-times"></span>
+           			<span class="fa fa-circle-o" style="display: none ;" id="player2-circle"></span>
+	            	<!-- <input type="" name=""  class="input-player" id="name2"  placeholder="enter your name">
+	            	<input id="submit" type="submit" value="New Game" /> -->
+	            	     <form>
+<input type="text" name="p2" id="nameTwo" required />
+      <input id="submit" type="submit" value="New Game" />
+	            	<p id="name_2"></p>
+		            <div id="player2" style="font-size:30pt;" contenteditable="true">
+		            	
+		            </div>
+	            </div>
+	            <div class="clear" contenteditable="true"></div>
+	        </div>
+	     </div>
+        <script src="tictac.js" async defer></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+// function check_win{
+// winningCombinations = [
+// [1,2,3],
+// [4,5,6],
+// [7,8,9],
+// [1,4,7],
+// [2,5,8],
+// [3,6,9],
+// [1,5,9],
+// [3,5,7]
+// ]; 
+// for (let i = 0; i < winningCombinations.length; i++) {
+	
+// }
+
+
+// function handler(){
+// if (currentPlayer == 0) {
+//     this.innerHTML = '<span class="fa fa-times"></span>'; }
+// else {
+//     this.innerHTML ='<span class="fa fa-circle-o"></span>';}} -->
