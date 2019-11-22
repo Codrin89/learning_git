@@ -1,11 +1,13 @@
 let canv = document.getElementById('canvas');
 let cnv = canv.getContext("2d");
+let reset_ball = false ;
+let undefined_ID = undefined;
+let endGame = false ;
 
 function init(){
 	leftP();
 	rightP();
 	moveCircle();
-	drawDashedLine();
 }
 
 window.onload = init;
@@ -25,17 +27,18 @@ function drawCircle() {
     cnv.fill();
     cnv.closePath();
 }
-function incremScore1(){
-	let score1 = document.getElementById('score1');
-	let score1Win = score1.innerHTML;
-	score1Win++;
-	score1.innerHTML = score1Win;
+function addText(){
+	cnv.font = 'italic 32px sans-serif';
+	cnv.fillText('HTML5 Canvas Tutorial', 10, 50);
 }
-function incremScore2(){
-	let score2 = document.getElementById('score2');
-	let score2Win = score2.innerHTML;
-	score2Win++;
-	score2.innerHTML = score2Win;
+function incremScore(player){
+	let score = document.getElementById('score'+player);
+	let scoreWin = score.innerHTML;
+	scoreWin++;
+	score.innerHTML = scoreWin;
+	if (scoreWin > 2) {
+		endGame = true;
+	}	
 }
 function moveCircle() {
 	if (positionY >= canvasHeight - radius || positionY <= radius ) {
@@ -44,30 +47,47 @@ function moveCircle() {
 	if (positionX > canvasWidth - radius || positionX < radius) {
 		if(positionX > canvasWidth/2){
 			console.log('dreapta a pierdut');
-			incremScore1();
+			incremScore(1);
+			reset_ball = true;
    		}
    		else{
 			console.log('stanga a pierdut');
-			incremScore2();
+			incremScore(2);
+			reset_ball = true;
 		}
-		vX *= -1;
 	}
-	if ((positionX >= objectR.x - radius && positionY >= objectR.y && positionY <= objectR.y + objectR.height) ||
-		(positionX <= objectL.x +objectL.width + radius &&  positionY >= objectL.y && positionY <= objectL.y + objectL.height)){
+	if ((positionX > objectR.x - radius && positionY >= objectR.y && positionY <= objectR.y + objectR.height) ||
+		(positionX < objectL.x + objectL.width + radius &&  positionY >= objectL.y && positionY <= objectL.y + objectL.height)){
 	    vX *= -1;
 	}
 	positionX += vX;
 	positionY += vY;
+	if(reset_ball){
+	 	positionX = 80;
+ 		positionY = 30;
+ 		reset_ball = false;
+	}
 	drawCircle();
 	leftP();
 	rightP();
-	requestAnimationFrame(moveCircle);
+    undefined_ID = window.requestAnimationFrame(moveCircle);
+	if(endGame){
+		if (undefined_ID) {
+	        window.cancelAnimationFrame(undefined_ID);
+	        undefined_ID = undefined;
+      		cnv.font = "bold 30px Courier New";
+      		cnv.fillStyle = "red";
+			cnv.fillText("Game end", 70, 70);
+      		setInterval(reset_btn,2000)
+    	}
+	}
 } 
+
 let objectL = {
 	height: 40,
 	width: 6,
 	x: 1,
-	y: 10, 
+	y: 55, 
 };
 document.addEventListener('keydown', function(event) {
 	if(event.keyCode == 38 && objectL.y > 0 ) {
@@ -86,7 +106,7 @@ let objectR = {
 	height: 40,
 	width: 6,
 	x: 293,
-	y: 10, 
+	y: 55, 
 };
 document.addEventListener('keydown', function(event) {
 	if(event.keyCode == 87 & objectR.y > 0 ) {
@@ -101,6 +121,7 @@ function rightP(){
 	cnv.fillStyle = "white";
 	cnv.fillRect(objectR.x, objectR.y, objectR.width, objectR.height);
 }
-function reset_tbn(){
+function reset_btn(){
 	window.location.reload(true);
 }
+
