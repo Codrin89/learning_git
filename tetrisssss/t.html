@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="t.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> game</title>
+</head>
+<body>
+	<div id="score_div">
+        Score : <div id="score">0</div>
+    </div>
+	<button onclick="reset_btn()" id="reset"> Reset game </button>
+	<canvas id="tetris" width="300" height="570" >
+	</canvas>
+
+</body onload="init()">
+<script src="t.js" async defer></script>
+</html>

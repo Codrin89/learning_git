@@ -3,7 +3,6 @@ let cnv = canv.getContext("2d");
 let reset_ball = false ;
 let undefined_ID = undefined;
 let endGame = false ;
-
 function init(){
 	leftP();
 	rightP();
@@ -56,7 +55,7 @@ function moveCircle() {
 			reset_ball = true;
 		}
 	}
-	if ((positionX > objectR.x - radius && positionY >= objectR.y && positionY <= objectR.y + objectR.height) ||
+	if ((positionX > objectR.x - radius && positionY >= objectR.y && positionY  <= objectR.y + objectR.height) ||
 		(positionX < objectL.x + objectL.width + radius &&  positionY >= objectL.y && positionY <= objectL.y + objectL.height)){
 	    vX *= -1;
 	}
@@ -78,14 +77,13 @@ function moveCircle() {
       		cnv.font = "bold 30px Courier New";
       		cnv.fillStyle = "red";
 			cnv.fillText("Game end", 70, 70);
-      		setInterval(reset_btn,2000)
     	}
 	}
 } 
 
 let objectL = {
 	height: 40,
-	width: 6,
+	width: 3,
 	x: 1,
 	y: 55, 
 };
@@ -104,8 +102,8 @@ function leftP(){
 };
 let objectR = {
 	height: 40,
-	width: 6,
-	x: 293,
+	width: 3,
+	x: 296,
 	y: 55, 
 };
 document.addEventListener('keydown', function(event) {
